@@ -1,4 +1,4 @@
-# TypeScript Project Boilerplate
+# TypeScript Projects Boilerplate
 
 This project is a simple boilerplate to start new projects in TypeScript. It includes testing and code coverage mocks and configuration.
 
