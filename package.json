@@ -1,0 +1,26 @@
+{
+  "name": "ts-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for TypeScript projects, testing included",
+  "main": "index.js",
+  "directories": {
+    "test": "dist/test"
+  },
+  "scripts": {
+    "clean": "rimraf dist coverage .nyc_output",
+    "build": "npm run clean && tsc",
+    "test": "tsc -p test && ./node_modules/.bin/mocha",
+    "cover": "npm run build && nyc --reporter=lcov --reporter=text npm test",
+    "check-coverage": "nyc check-coverage --statements 90 --branches 50 --functions 100 --lines 100"
+  },
+  "author": "Antonio Pintus <apintus@vivocha.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^3.5.1",
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^7.0.13",
+    "mocha": "^3.2.0",
+    "nyc": "^10.2.2",
+    "rimraf": "^2.6.1"
+  }
+}
