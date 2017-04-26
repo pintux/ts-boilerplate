@@ -3,6 +3,7 @@
 This project is a simple boilerplate to start new projects in TypeScript. It includes testing and code coverage mocks and configuration.
 
 The project is configured to put built sources into the `dist` directory, while compiled tests are kept in the `test` directory.
+Tests can be written in TypeScript or JavaScript.
 
 See `package.json` to discover all the defined scripts.
 
