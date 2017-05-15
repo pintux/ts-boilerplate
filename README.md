@@ -1,21 +1,49 @@
 # TypeScript Projects Boilerplate
 
-This project is a simple boilerplate to start new projects in TypeScript. It includes testing and code coverage mocks and configuration.
+This project is a simple boilerplate to start new projects in TypeScript. It includes testing, code coverage mocks and related configuration, including the integration with Travis CI. The latter, at the end of the process, increments the version, creates a new release on Github and publishes the package to NPM registry.
 
 The project is configured to put built sources into the `dist` directory, while compiled tests are kept in the `test` directory.
 Tests can be written in TypeScript or JavaScript.
 
 See `package.json` to discover all the defined scripts.
 
-E.g.:
 
-Running 
 
-    npm run cover
+---
 
-cleans, builds, tests and does code coverage.
+Prerequisites
+--------------
 
-Have fun.
+1. a [Github](https://github.com/) account and repository;
+2. a [Travis CI](https://travis-ci.org/) account, configured to use your Github repos;
+3. a [Coveralls](https://coveralls.io/) account, with your Github repository imported and enabled;
+4. Install [`npm install -g semantic-release-cli`](https://www.npmjs.com/package/semantic-release-cli) and then run: `semantic-version-cli setup`. 
+
+Follow the instructions and answer to questions to configure semantic release.
+
+---
+
+The Workflow
+------------
+
+1. Write code and tests;
+2. `npm run build`;
+3. `npm test`;
+
+OR
+
+2. Run `npm run precommit`;
+3. goto 1   ;)
+
+When ready to create a new version:
+
+4. `git add <your modified files>`;
+5. `npm run commit`;
+6. `git push`.
+
+The latter step fires an event for Travis CI which reads the `.travis.yml` configuration file, builds and tests the code and if all is ok the it publishes the new version of the package.  
+
+
 
 
 ---

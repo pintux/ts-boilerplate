@@ -1,5 +1,21 @@
 import { fetchHeaders } from '../dist/sample';
 
+var mochaAsync = (fn) => {
+    return async () => {
+        try {
+            await fn();
+            return;
+        } catch (err) {
+            return;
+        }
+    };
+};
+
+//global before
+before(mochaAsync(async () => {
+    const headers = await fetchHeaders('http://www.vivocha.com');
+}));
+
 describe('test fetchHeaders', function () {
     it('should return headers as an object', async function () {
         return async () => {
