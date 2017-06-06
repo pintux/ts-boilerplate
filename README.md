@@ -17,7 +17,7 @@ Prerequisites
 1. a [Github](https://github.com/) account and repository;
 2. a [Travis CI](https://travis-ci.org/) account, configured to use your Github repos;
 3. a [Coveralls](https://coveralls.io/) account, with your Github repository imported and enabled;
-4. Install [`npm install -g semantic-release-cli`](https://www.npmjs.com/package/semantic-release-cli) and then run: `semantic-version-cli setup`. 
+4. Install [`npm install -g semantic-release-cli`](https://www.npmjs.com/package/semantic-release-cli) and then run: `semantic-release-cli setup`. 
 
 Follow the instructions and answer to questions to configure semantic release.
 
