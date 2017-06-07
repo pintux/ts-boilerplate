@@ -14,12 +14,13 @@ See `package.json` to discover all the defined scripts.
 Prerequisites
 --------------
 
-1. a [Github](https://github.com/) account and repository;
-2. a [Travis CI](https://travis-ci.org/) account, configured to use your Github repos;
+1. a [Github](https://github.com/) account and a repository; put the correct repos name in the `repository.url` property in the *package.json* file.
+2. a [Travis CI](https://travis-ci.org/) account, with your Github repos enabled; remember to configure the tokens!
 3. a [Coveralls](https://coveralls.io/) account, with your Github repository imported and enabled;
-4. Install [`npm install -g semantic-release-cli`](https://www.npmjs.com/package/semantic-release-cli) and then run: `semantic-release-cli setup`. 
+4. `npm install`
+5. Install [`npm install -g semantic-release-cli`](https://www.npmjs.com/package/semantic-release-cli) and then run: `semantic-release-cli setup`. 
 
-Follow the instructions and answer to questions to configure semantic release.
+Follow the instructions and answer to questions to configure *semantic release*.
 
 ---
 

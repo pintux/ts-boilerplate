@@ -1,5 +1,7 @@
 import { fetchHeaders } from '../dist/sample';
 
+//WARNING: ASYNC / AWAIT WORK ONLY WITH NODE > v7.6
+
 var mochaAsync = (fn) => {
     return async () => {
         try {
