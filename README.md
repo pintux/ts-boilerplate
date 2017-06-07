@@ -26,6 +26,8 @@ Follow the instructions and answer to questions to configure *semantic release*.
 
 The Workflow
 ------------
+After you configured all the tools, you can start working to your project, edit and create new files, etc...
+Then, the workflow you can adopt is the following:
 
 1. Write code and tests;
 2. `npm run build`;
