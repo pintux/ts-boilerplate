@@ -1,1 +1,1 @@
-export declare function fetchHeaders(url: string): Promise<object>;
+export declare function fetchHeaders(url: string): Promise<any>;

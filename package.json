@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "directories": {
-    "test": "dist/test"
+    "test": "test"
   },
   "scripts": {
     "clean": "rimraf dist coverage .nyc_output",
@@ -14,11 +14,11 @@
     "build": "tsc",
     "precommit": "npm run build && npm run cover && npm run check-coverage",
     "commit": "git-cz",
-    "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "check-coverage": "./node_modules/.bin/nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
     "watch:test": "npm t -- -w",
-    "test": "mocha test/*.test.js",
-    "cover": "nyc --reporter=lcov --reporter=text npm t",
+    "test": "npm run build && tsc -p test && mocha --recursive test/**/*.test.js",
+    "cover": "./node_modules/.bin/nyc --reporter=lcov --reporter=text npm t",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
@@ -33,23 +33,23 @@
   "author": "Antonio Pintus <apintus@vivocha.com> (http://www.vivocha.com/)",
   "license": "MIT",
   "devDependencies": {
-    "@types/chai": "^4.0.0",
+    "@types/chai": "^4.0.4",
     "@types/chai-as-promised": "0.0.31",
     "@types/chai-spies": "0.0.0",
-    "@types/mocha": "^2.2.41",
-    "@types/node": "^7.0.18",
-    "chai": "^4.0.2",
-    "chai-as-promised": "^6.0.0",
+    "@types/mocha": "^2.2.42",
+    "@types/node": "^8.0.25",
+    "chai": "^4.1.1",
+    "chai-as-promised": "^7.1.1",
     "chai-spies": "^0.7.1",
     "commitizen": "^2.9.6",
     "coveralls": "^2.13.1",
     "cz-conventional-changelog": "^2.0.0",
-    "husky": "^0.13.3",
-    "mocha": "^3.4.1",
-    "nyc": "^11.0.2",
+    "husky": "^0.14.3",
+    "mocha": "^3.5.0",
+    "nyc": "^11.1.0",
     "rimraf": "^2.6.1",
-    "semantic-release": "^6.3.6",
-    "typescript": "^2.3.2"
+    "semantic-release": "^7.0.2",
+    "typescript": "^2.4.2"
   },
   "config": {
     "commitizen": {

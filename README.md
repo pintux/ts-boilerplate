@@ -1,9 +1,13 @@
 # TypeScript Projects Boilerplate
 
-This project is a simple boilerplate to start new projects in TypeScript. It includes testing, code coverage mocks and related configuration, including the integration with Travis CI. The latter, at the end of the process, increments the version, creates a new release on Github and publishes the package to NPM registry.
+This project is a simple boilerplate to start new projects in TypeScript. It includes testing scripts, code coverage mocks and related configuration, including the integration with Travis CI. The latter, at the end of the process, increases the version, creates a new release on Github and publishes the package to NPM registry.
 
-The project is configured to put built sources into the `dist` directory, while compiled tests are kept in the `test` directory.
-Tests can be written in TypeScript or JavaScript.
+The project is configured to put built sources into the `dist` directory.
+
+Tests can be written in TypeScript or JavaScript. The `test` directory contains two subfolders:
+
+- `ts`: put here the test files written in Typescript, remember to import entities to test from the `../../dist` dir, see test sample. Compiled TypeScript tests are kept in the `test/ts` directory;
+- `js`: put here the test files written in JavaScript.
 
 See `package.json` to discover all the defined scripts.
 

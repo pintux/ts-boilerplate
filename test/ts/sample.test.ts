@@ -1,4 +1,4 @@
-import { fetchHeaders } from '../dist/sample';
+import { fetchHeaders } from '../../dist/sample';
 
 //WARNING: ASYNC / AWAIT WORK ONLY WITH NODE > v7.6
 
