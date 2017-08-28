@@ -22,9 +22,9 @@ Prerequisites
 2. a [Travis CI](https://travis-ci.org/) account, with your Github repos enabled; remember to configure the tokens!
 3. a [Coveralls](https://coveralls.io/) account, with your Github repository imported and enabled;
 4. `npm install`
-5. Install [`npm install -g semantic-release-cli`](https://www.npmjs.com/package/semantic-release-cli) and then run: `semantic-release-cli setup`. 
+5. Install [`npm install -g semantic-release-cli`](https://www.npmjs.com/package/semantic-release-cli) and then run: `semantic-release-cli setup`. Follow the instructions and answer to questions to configure *semantic release*
+6. Install [`npm i -g commitizen`] (https://commitizen.github.io/cz-cli/).
 
-Follow the instructions and answer to questions to configure *semantic release*.
 
 ---
 
