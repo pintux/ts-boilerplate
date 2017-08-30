@@ -9,6 +9,14 @@ Tests can be written in TypeScript or JavaScript. The `test` directory contains 
 - `ts`: put here the test files written in Typescript, remember to import entities to test from the `../../dist` dir, see test sample. Compiled TypeScript tests are kept in the `test/ts` directory;
 - `js`: put here the test files written in JavaScript.
 
+It is possible to run tests in *debug* mode, using the Node Inspector.
+
+To run tests in debug mode: 
+1. `npm run test:debug`
+2. Open Chrome at: `chrome://inspect/#devices`, and select the running node process.
+
+
+
 See `package.json` to discover all the defined scripts.
 
 
